@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>vote</title>
+        </head>
+        <body>
+            <link rel = "stylesheet" href = "./dom.css">
+            <h1>Eligible for voting</h1>
+            <input type = "number" id = "age" placeholder = "enter age">
+            <button onclick = "submit()">click</button>
+            <p id = "output">result</p>
+        </body>
+    </html>
+    <script>
+        function submit(){
+            let age = document.getElementById("age").value;
+            if(age > 18)
+            {
+             document.getElementById("output").innerText="eligible";   
+            }
+            else if(age < 18)
+            {
+                document.getElementById("output").innerText=" not eligible";   
+            }
+            else{
+                document.getElementById("output").innerText=" just eligible";  
+            }
+           
+        }
+    </script>
